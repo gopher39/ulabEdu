@@ -8,6 +8,7 @@ public class Task2_2 {
 
             [3, 4, 2, 7], 10 -> [3, 7] - вывести пару менно в скобках, которые дают сумму - 10
          */
+
 Scanner input = new Scanner(System.in);
 System.out.println("Введите массив чисел:");
 int[] array = new int[5];
