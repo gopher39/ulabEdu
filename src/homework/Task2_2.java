@@ -9,9 +9,9 @@ public class Task2_2 {
             [3, 4, 2, 7], 10 -> [3, 7] - вывести пару чисел именно в скобках, которые дают сумму - 10
          */
 
-Scanner input = new Scanner(System.in);
-System.out.println("Введите массив чисел:");
-int[] array = new int[5];                                           //create array
+    Scanner input = new Scanner(System.in);
+    System.out.println("Введите массив чисел:");
+    int[] array = new int[5];                                           //create array
         for (int i = 0; i < array.length; i++) {
             array[i] = input.nextInt();                             //input array's elements from keyboard
         }
