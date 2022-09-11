@@ -117,10 +117,12 @@ public class Task2_1 {
 
         Arrays.stream(RAW_DATA)
                 .filter(Objects::nonNull)
-                .distinct()      //exclusion of duplicate
-                .sorted(Comparator.comparing(Person::getId)) //sorted by Id
+                //returns true if the provided reference is non-null otherwise returns false
+                .distinct()                                     //exclusion of duplicate
+                .sorted(Comparator.comparing(Person::getId))    //sorted by Id
                 .collect(Collectors.groupingBy(Person::getName,
-                    Collectors.counting()))   //grouping by Name
-                .forEach((key, value) -> System.out.printf("Key: %s \n Value: %d \n", key, value));  //terminal method of printing results
+                    Collectors.counting()))                     //grouping by Name
+                .forEach((key, value) -> System.out.printf("Key: %s \n Value: %d \n", key, value));
+                //terminal method of printing results
         }
 }
