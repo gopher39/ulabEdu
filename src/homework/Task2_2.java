@@ -11,19 +11,20 @@ public class Task2_2 {
 
 Scanner input = new Scanner(System.in);
 System.out.println("Введите массив чисел:");
-int[] array = new int[5];
+int[] array = new int[5];                                           //create array
         for (int i = 0; i < array.length; i++) {
-            array[i] = input.nextInt();
+            array[i] = input.nextInt();                             //input array's elements from keyboard
         }
 System.out.println("Введите число которое нужно получить:");
-        int number = input.nextInt();
+        int number = input.nextInt();                               //input desired number
         int startSearch = 0;
         boolean notFound = false;
-        for (int i = startSearch; i < array.length; i++) {
-            for (int j = startSearch + 1; j < array.length; j++) {
-                if (array[i] + array[j] == number) {
+        for (int i = startSearch; i < array.length; i++) {          //take the first element of the array
+            for (int j = startSearch + 1; j < array.length; j++) {  //take the all next elements of the array
+                if (array[i] + array[j] == number) {                //equals summ two elements with number
                     notFound = true;
                     System.out.println("[" + array[i] + "," + array[j] + "]");
+                    //if summ equals number then printing result
                 }
             }
             startSearch++;
