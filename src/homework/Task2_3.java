@@ -25,6 +25,12 @@ public class Task2_3 {
     }
 
     static void fuzzySearch(String word, String text) {
+
+        if (word == null || text == null) {
+            System.out.println("false");
+            return;
+        }
+
         if (word.length() == text.length() && word.equals(text)) {
             System.out.println("true");
             return;
