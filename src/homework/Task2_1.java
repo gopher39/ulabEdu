@@ -91,6 +91,8 @@ public class Task2_1 {
         System.out.println();
 
         for (Person person : RAW_DATA) {
+           // if (person.name == null)
+
             System.out.println(person.id + " - " + person.name);
         }
 
@@ -118,6 +120,8 @@ public class Task2_1 {
         Arrays.stream(RAW_DATA)
                 .filter(Objects::nonNull)
                 //returns true if the provided reference is non-null otherwise returns false
+                .filter(Obj -> Obj.getName() != null)
+                //Returns a stream consisting of the elements of this stream that match the given predicate
                 .distinct()                                     //exclusion of duplicate
                 .sorted(Comparator.comparing(Person::getId))    //sorted by Id
                 .collect(Collectors.groupingBy(Person::getName,
