@@ -29,7 +29,7 @@ System.out.println("Введите число которое нужно полу
             }
             startSearch++;
         }
-        if (notFound == true) {
+        if (notFound) {
             System.out.println("Извините, сумма пар чисел Вашего массиве не дает число " + number);
         }
         }
