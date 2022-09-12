@@ -31,7 +31,7 @@ public class Task2_3 {
             return;
         }
 
-        if (word.length() == text.length() && word.equals(text)) {
+        if (word.equals(text)) {
             System.out.println("true");
             return;
         }
