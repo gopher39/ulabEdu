@@ -18,18 +18,18 @@ public class Task2_2 {
 System.out.println("Введите число которое нужно получить:");
         int number = input.nextInt();                               //input desired number
         int startSearch = 0;
-        boolean notFound = false;
+        boolean notFound = true;
         for (int i = startSearch; i < array.length; i++) {          //take the first element of the array
             for (int j = startSearch + 1; j < array.length; j++) {  //take the all next elements of the array
                 if (array[i] + array[j] == number) {                //equals summ two elements with number
-                    notFound = true;
+                    notFound = false;
                     System.out.println("[" + array[i] + "," + array[j] + "]");
                     //if summ equals number then printing result
                 }
             }
             startSearch++;
         }
-        if (notFound == false) {
+        if (notFound == true) {
             System.out.println("Извините, сумма пар чисел Вашего массиве не дает число " + number);
         }
         }
