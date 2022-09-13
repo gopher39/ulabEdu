@@ -128,5 +128,6 @@ public class Task2_1 {
                     Collectors.counting()))                     //grouping by Name
                 .forEach((key, value) -> System.out.printf("Key: %s \n Value: %d \n", key, value));
                 //terminal method of printing results
+
         }
 }

@@ -15,7 +15,8 @@ public class Task2_2 {
         for (int i = 0; i < array.length; i++) {
             array[i] = input.nextInt();                             //input array's elements from keyboard
         }
-System.out.println("Введите число которое нужно получить:");
+
+        System.out.println("Введите число которое нужно получить:");
         int number = input.nextInt();                               //input desired number
         int startSearch = 0;
         boolean notFound = true;
@@ -29,9 +30,10 @@ System.out.println("Введите число которое нужно полу
             }
             startSearch++;
         }
-        if (notFound) {
-            System.out.println("Извините, сумма пар чисел Вашего массиве не дает число " + number);
-        }
-        }
+
+            if (notFound) {
+                System.out.println("Извините, сумма пар чисел Вашего массиве не дает число " + number);
+            }
+    }
 }
 
