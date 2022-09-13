@@ -23,17 +23,16 @@ public class Task2_2 {
 
         System.out.println("Введите число которое нужно получить:");
         int number = input.nextInt();                               //input desired number
-        int startSearch = 0;
         boolean notFound = true;
 
         List<Integer> twoNumbers = new ArrayList<>();
-            for (int i = startSearch; i < array.length; i++) {
-                if (Arrays.asList(array).contains(number - array[i])) {
-                    twoNumbers.add(array[i]);
-                    twoNumbers.add(number - array[i]);
-                    notFound = false;
-                }
+        for (Integer integer : array) {
+            if (Arrays.asList(array).contains(number - integer)) {
+                twoNumbers.add(integer);
+                twoNumbers.add(number - integer);
+                notFound = false;
             }
+        }
 
             System.out.println(twoNumbers.stream().limit(2).toList());
 
