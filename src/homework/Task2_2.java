@@ -1,5 +1,10 @@
 package homework;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
+
 public class Task2_2 {
     public static void main(String[] args) {
 
@@ -11,25 +16,26 @@ public class Task2_2 {
 
     Scanner input = new Scanner(System.in);
     System.out.println("Введите массив чисел:");
-    int[] array = new int[5];                                           //create array
+    Integer[] array = new Integer[5];                               //create array
         for (int i = 0; i < array.length; i++) {
-            array[i] = input.nextInt();                             //input array's elements from keyboard
+            array[i] = input.nextInt();                            //input array's elements from keyboard
         }
 
         System.out.println("Введите число которое нужно получить:");
         int number = input.nextInt();                               //input desired number
         int startSearch = 0;
         boolean notFound = true;
-        for (int i = startSearch; i < array.length; i++) {          //take the first element of the array
-            for (int j = startSearch + 1; j < array.length; j++) {  //take the all next elements of the array
-                if (array[i] + array[j] == number) {                //equals summ two elements with number
+
+        List<Integer> twoNumbers = new ArrayList<>();
+            for (int i = startSearch; i < array.length; i++) {
+                if (Arrays.asList(array).contains(number - array[i])) {
+                    twoNumbers.add(array[i]);
+                    twoNumbers.add(number - array[i]);
                     notFound = false;
-                    System.out.println("[" + array[i] + "," + array[j] + "]");
-                    //if summ equals number then printing result
                 }
             }
-            startSearch++;
-        }
+
+            System.out.println(twoNumbers.stream().limit(2).toList());
 
             if (notFound) {
                 System.out.println("Извините, сумма пар чисел Вашего массиве не дает число " + number);
