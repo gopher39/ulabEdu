@@ -26,10 +26,10 @@ public class Task2_2 {
         boolean notFound = true;
 
         List<Integer> twoNumbers = new ArrayList<>();
-        for (Integer integer : array) {
-            if (Arrays.asList(array).contains(number - integer)) {
-                twoNumbers.add(integer);
-                twoNumbers.add(number - integer);
+        for (Integer element : array) {
+            if (Arrays.asList(array).contains(number - element)) {
+                twoNumbers.add(element);
+                twoNumbers.add(number - element);
                 notFound = false;
             }
         }
